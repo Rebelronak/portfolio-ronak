@@ -34,10 +34,15 @@ const ContactForm = () => {
         }),
       });
       const data = await res.json();
-      if (data.error) throw new Error(data.error);
+      
+      // Check for errors in response
+      if (!res.ok || data.error || data.resendError) {
+        throw new Error(data.error || data.resendError || "Failed to send message");
+      }
+      
       toast({
         title: "Thank you!",
-        description: "I'll get back to you as soon as possible.",
+        description: "Message received! I'll get back to you soon.",
         variant: "default",
         className: cn("top-0 mx-auto flex fixed md:top-4 md:right-4"),
       });
@@ -50,16 +55,17 @@ const ContactForm = () => {
         clearTimeout(timer);
       }, 1000);
     } catch (err) {
+      console.error("Contact form error:", err);
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description: "Something went wrong! Please try again or email me directly.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
         variant: "destructive",
       });
+      setLoading(false);
     }
-    setLoading(false);
   };
   return (
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
