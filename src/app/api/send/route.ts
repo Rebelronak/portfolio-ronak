@@ -3,7 +3,9 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY 
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
@@ -21,6 +23,15 @@ export async function POST(req: Request) {
     } = Email.safeParse(body);
     if (!zodSuccess)
       return Response.json({ error: zodError?.message }, { status: 400 });
+
+    // If no Resend API key, just log the message
+    if (!resend) {
+      console.log("Contact form submission (Resend not configured):", zodData);
+      return Response.json({ 
+        message: "Message received. Email service not configured yet.",
+        data: zodData 
+      });
+    }
 
     const { data: resendData, error: resendError } = await resend.emails.send({
       from: "Porfolio <onboarding@resend.dev>",
