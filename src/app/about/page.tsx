@@ -43,26 +43,26 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "abhijitzende75@gmail",
-    href: "mailto:abhijitzende75@gmail.com",
+    content: "ronaktalks664@gmail.com",
+    href: "mailto:ronaktalks664@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
-    content: "1234567890",
-    href: "tel:8308509180",
+    content: "Available on request",
+    href: "#",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/zende-abhijit/",
-    content: "/zende-abhijit",
+    href: "https://in.linkedin.com/in/ronakkanani",
+    content: "/ronakkanani",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Abhiz2411",
-    content: "/naresh-khatri",
+    href: "https://github.com/Rebelronak",
+    content: "/Rebelronak",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -251,9 +251,9 @@ function Page() {
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Naresh Khatri</p>
+                <p className="text-center text-xl">Ronak Kanani</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
-                  Web Developer
+                  AI Enthusiast
                 </div>
               </div>
             </div>
@@ -287,15 +287,15 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Abhijit, a Comp. Sci. Engineer with 1.5 year experience in Devlopment, DevOps and 
-              Database management with hands-on experience in deploying & automating workflows, and 
-              collaborating with foreign clients. Strong analytical skills,effective communication,
+              Hey there! I&apos;m Ronak Kanani, a Computer Science Engineer with 1.5 years of experience in Development, 
+              DevOps & Database management. I have hands-on experience in deploying & automating workflows, and 
+              collaborating with clients globally. I bring strong analytical skills, effective communication,
               and a team-oriented approach to driving process improvements and delivering results.
             </p>
             <p className="mb-10">
-              When I&apos;m not coding, you can find me [Your
-              Interests/Hobbies], exploring new technologies, or sipping coffee
-              while brainstorming my next project.
+              When I&apos;m not coding, you&apos;ll find me exploring new AI/ML technologies, building innovative projects,
+              or brainstorming the next big idea. I&apos;m passionate about solving real-world problems with AI and 
+              creating impactful solutions.
             </p>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">

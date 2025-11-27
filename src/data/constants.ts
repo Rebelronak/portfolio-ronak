@@ -1,45 +1,27 @@
-// thoda zada ts ho gya idhar
 export enum SkillNames {
-  AWS = "aws",
-  // AZURE = "azure",    // +
-  LINUX = "linux",    
-  // SHELL = "shell",    // +
-  // PYTHON = "python",  // +
-  GIT = "git",
-  DOCKER = "docker",
-  // SELENIUM = "selenium",  // +
-  // JENKINS = "jenkins",    // +
-  // KUBERNETES = "kubernetes",  // +
-  // ANSIBLE = "ansible",    // +
-  // TERRAFORM = "terraform",  // +
-  // PROMETHEUS = "prometheus",  // +
-  // GRAFANA = "grafana",    // +
-  // SONARQUBE = "sonarqube",  // +
-  // OWASP = "owasp",    // +
-  // TRIVY = "trivy",    // +
-  // MAVEN = "maven",    // +
-  // GO = "go",        // +
-  HTML = "html",
-  CSS = "css",
-  JS = "js",
-  // JAVA = "java",    // +
-  POSTGRES = "postgres",
-  TS = "ts",         //
-  REACT = "react",   //
-  VUE = "vue",       //
-  NEXTJS = "nextjs", //
-  TAILWIND = "tailwind",  //
-  NODEJS = "nodejs",  //
-  EXPRESS = "express",  // 
-  MONGODB = "mongodb",  //
-  GITHUB = "github",   //
-  PRETTIER = "prettier",  //
-  NPM = "npm",       //
-  FIREBASE = "firebase",  //
-  WORDPRESS = "wordpress",  //
-  NGINX = "nginx",      //
-  VIM = "vim",           //
-  VERCEL = "vercel",    //
+  // AI Research Tools
+  CHATGPT = "chatgpt",
+  CLAUDE = "claude",
+  PERPLEXITY = "perplexity",
+  GEMINI = "gemini",
+  
+  // AI/ML Tools
+  PYTHON = "python",
+  TENSORFLOW = "tensorflow",
+  PYTORCH = "pytorch",
+  JUPYTER = "jupyter",
+  
+  // AI Agents & APIs
+  OPENAI = "openai",
+  LANGCHAIN = "langchain",
+  HUGGINGFACE = "huggingface",
+  OLLAMA = "ollama",
+  
+  // Collaboration Tools
+  GITHUB = "github",
+  VSCODE = "vscode",
+  COLAB = "colab",
+  DRIVE = "drive",
 }
 export type Skill = {
   id: number;
@@ -50,204 +32,140 @@ export type Skill = {
   icon: string;
 };
 export const SKILLS: Record<SkillNames, Skill> = {
-  [SkillNames.JS]: {
+  // AI Research Tools
+  [SkillNames.CHATGPT]: {
     id: 1,
-    name: "js",
-    label: "JavaScript",
-    shortDescription: "yeeting code into the DOM since '95, no cap! 💯🚀",
-    color: "#f0db4f",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    name: "chatgpt",
+    label: "ChatGPT",
+    shortDescription: "OpenAI's conversational AI that's smarter than your average chatbot 🤖💬",
+    color: "#10a37f",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg",
   },
-  [SkillNames.TS]: {
+  [SkillNames.CLAUDE]: {
     id: 2,
-    name: "ts",
-    label: "TypeScript",
-    shortDescription:
-      "JavaScript's overachieving cousin who's always flexing 💯🔒",
-    color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    name: "claude",
+    label: "Claude",
+    shortDescription: "Anthropic's AI assistant, thoughtful and helpful, no cap! 🧠✨",
+    color: "#d97757",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anthropic/anthropic-original.svg",
   },
-  [SkillNames.HTML]: {
+  [SkillNames.PERPLEXITY]: {
     id: 3,
-    name: "html",
-    label: "HTML",
-    shortDescription: "the internet's granddad,  still bussin' fr fr! 💀🔥",
-    color: "#e34c26",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    name: "perplexity",
+    label: "Perplexity",
+    shortDescription: "AI-powered search that actually gets you answers, fr fr! 🔍🚀",
+    color: "#20808d",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perplexity/perplexity-original.svg",
   },
-  [SkillNames.CSS]: {
+  [SkillNames.GEMINI]: {
     id: 4,
-    name: "css",
-    label: "CSS",
-    shortDescription: "styling with the ultimate drip, no cap 💁‍♂️🔥",
-    color: "#563d7c",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    name: "gemini",
+    label: "Gemini",
+    shortDescription: "Google's multimodal AI, seeing and understanding everything! 👁️🌟",
+    color: "#4285f4",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
   },
-  [SkillNames.REACT]: {
+  
+  // AI/ML & Data Science
+  [SkillNames.PYTHON]: {
     id: 5,
-    name: "react",
-    label: "React",
-    shortDescription: `"use using" 
-using use = useUsing("use")`,
-    color: "#61dafb",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    name: "python",
+    label: "Python",
+    shortDescription: "The MVP of AI/ML, making data science look easy! 🐍📊",
+    color: "#3776ab",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
-  [SkillNames.VUE]: {
+  [SkillNames.TENSORFLOW]: {
     id: 6,
-    name: "vue",
-    label: "Vue",
-    shortDescription:
-      "the chill pill for your frontend, it hits different! 🟢😌",
-    color: "#41b883",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    name: "tensorflow",
+    label: "TensorFlow",
+    shortDescription: "Google's deep learning framework, training models like a boss! 🧠🔥",
+    color: "#ff6f00",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
   },
-  [SkillNames.NEXTJS]: {
+  [SkillNames.PYTORCH]: {
     id: 7,
-    name: "nextjs",
-    label: "Next.js",
-    shortDescription:
-      "the drama queen of front-end frameworks, and we stan! 👑📜",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    name: "pytorch",
+    label: "PyTorch",
+    shortDescription: "Facebook's ML framework, researchers' favorite tool! 🔥🧪",
+    color: "#ee4c2c",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
   },
-  [SkillNames.TAILWIND]: {
+  [SkillNames.JUPYTER]: {
     id: 8,
-    name: "tailwind",
-    label: "Tailwind",
-    shortDescription: "utility classes hitting different fr fr 🌪️🔥",
-    color: "#38bdf8",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    name: "jupyter",
+    label: "Jupyter",
+    shortDescription: "Interactive notebooks where data science magic happens! 📓✨",
+    color: "#f37626",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg",
   },
-  [SkillNames.NODEJS]: {
+  
+  // AI Agents & APIs
+  [SkillNames.OPENAI]: {
     id: 9,
-    name: "nodejs",
-    label: "Node.js",
-    shortDescription: "JavaScript said 'sike, I'm backend now', deadass! 🔙🔚",
-    color: "#6cc24a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    name: "openai",
+    label: "OpenAI API",
+    shortDescription: "Building AI agents with GPT power, unstoppable! 🤖⚡",
+    color: "#10a37f",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg",
   },
-  [SkillNames.EXPRESS]: {
+  [SkillNames.LANGCHAIN]: {
     id: 10,
-    name: "express",
-    label: "Express",
-    shortDescription: "middlewares go dummy hard, no cap! 🚂💨",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    name: "langchain",
+    label: "LangChain",
+    shortDescription: "Chaining LLMs together for AI agent magic! 🔗🪄",
+    color: "#1c3c3c",
+    icon: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4",
   },
-  [SkillNames.POSTGRES]: {
+  [SkillNames.HUGGINGFACE]: {
     id: 11,
-    name: "postgres",
-    label: "PostgreSQL",
-    shortDescription: "SQL but make it fashion, purr 💅🐘",
-    color: "#336791",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    name: "huggingface",
+    label: "HuggingFace",
+    shortDescription: "The GitHub of AI models, community-driven! 🤗🎯",
+    color: "#ffcc4d",
+    icon: "https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png",
   },
-  [SkillNames.MONGODB]: {
+  [SkillNames.OLLAMA]: {
     id: 12,
-    name: "mongodb",
-    label: "MongoDB",
-    shortDescription: "flexin' with that NoSQL drip, respectfully! 💪🍃",
-    color: "#336791",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    name: "ollama",
+    label: "Ollama",
+    shortDescription: "Running LLMs locally, privacy on point! 🦙💻",
+    color: "#000000",
+    icon: "https://raw.githubusercontent.com/ollama/ollama/main/docs/images/ollama.png",
   },
-  [SkillNames.GIT]: {
-    id: 13,
-    name: "git",
-    label: "Git",
-    shortDescription: "the code's personal bodyguard, no cap! 🕵️‍♂️🔄",
-    color: "#f1502f",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
+  
+  // Collaboration Tools
   [SkillNames.GITHUB]: {
-    id: 14,
+    id: 13,
     name: "github",
     label: "GitHub",
-    shortDescription: "sliding into those pull requests, IYKYK! 🐙",
-    color: "#000000",
+    shortDescription: "Where code lives, collaborates, and thrives! 🐙💻",
+    color: "#181717",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
-  [SkillNames.PRETTIER]: {
-    id: 15,
-    name: "prettier",
-    label: "Prettier",
-    shortDescription: "making your code not a whole mess, thank u next 🧹✨",
-    color: "#f7b93a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg",
-  },
-  [SkillNames.NPM]: {
-    id: 16,
-    name: "npm",
-    label: "NPM",
-    shortDescription: "package manager said 'I gotchu fam', period! 📦💯",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
-  },
-  [SkillNames.FIREBASE]: {
-    id: 17,
-    name: "firebase",
-    label: "Firebase",
-    shortDescription:
-      "your app's ultimate wingman, but watch out, vendor lock-in vibes! 🔥👌",
-    color: "#ffca28",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-  },
-  [SkillNames.WORDPRESS]: {
-    id: 18,
-    name: "wordpress",
-    label: "WordPress",
-    shortDescription: "the grandpa of CMS, still rocking that cane 🧓👴",
+  [SkillNames.VSCODE]: {
+    id: 14,
+    name: "vscode",
+    label: "VS Code",
+    shortDescription: "The code editor that does it all, literally! 💻🎨",
     color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   },
-  [SkillNames.LINUX]: {
-    id: 19,
-    name: "linux",
-    label: "Linux",
-    shortDescription: "where 'chmod 777' is the ultimate flex 🔓🙌",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+  [SkillNames.COLAB]: {
+    id: 15,
+    name: "colab",
+    label: "Google Colab",
+    shortDescription: "Free GPUs for your ML experiments, blessed! 🎁🚀",
+    color: "#f9ab00",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg",
   },
-  [SkillNames.DOCKER]: {
-    id: 20,
-    name: "docker",
-    label: "Docker",
-    shortDescription: "The best containerization! 🐳🔥",
-    color: "#2496ed",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  },
-  [SkillNames.NGINX]: {
-    id: 21,
-    name: "nginx",
-    label: "NginX",
-    shortDescription: "reverse proxy go zoom zoom, sheesh! 🚗💨",
-    color: "#008000",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
-  },
-  [SkillNames.AWS]: {
-    id: 22,
-    name: "aws",
-    label: "AWS",
-    shortDescription:
-      "always extra, making everything more complicated, period! 🌐👨‍💻",
-    color: "#ff9900",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg",
-  },
-  [SkillNames.VIM]: {
-    id: 23,
-    name: "vim",
-    label: "Vim",
-    shortDescription: "exit? In this economy? Ight, imma head out! 🚪🏃",
-    color: "#e34c26",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
-  },
-  [SkillNames.VERCEL]: {
-    id: 24,
-    name: "vercel",
-    label: "Vercel",
-    shortDescription:
-      "The triangle compony, helps you deploy and go touch grass! 🚀🌿",
-    color: "#6cc24a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+  [SkillNames.DRIVE]: {
+    id: 16,
+    name: "drive",
+    label: "Google Drive",
+    shortDescription: "Cloud storage that keeps all your files safe! ☁️📁",
+    color: "#4285f4",
+    icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png",
   },
 };
 

@@ -1,14 +1,10 @@
-![Portfolio Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)
+# 🚀 Ronak Kanani - Portfolio Website
 
-# 🚀 My Portfolio Website
+Welcome to my personal portfolio website! 🎉 This project showcases my skills, projects, and journey as an AI Enthusiast and Full Stack Developer in a visually stunning and interactive manner.
 
-Welcome to the repository for my personal portfolio website! 🎉 This project is a culmination of creativity, technology, and my dedication to showcasing my skills, projects, and personality in a visually stunning and interactive manner.
-
-### Live preview: https://www.abhijitzende.com/
+### Live preview: https://ronakkanani.com/
 
 ![Preview](https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/public/assets/preview_video.gif?raw=true)
-
-https://github.com/Abhiz2411/3D-interactive-portfolio/blob/main/preview_video.mp4
 
 This project is **inspired** by the amazing work of [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio). His innovative approach to web design and attention to detail has been a huge influence. Thank you, Naresh! 🙏
 
@@ -83,7 +79,7 @@ The portfolio website is built using the following tools and technologies:
 
 ## 🚀 Deployment
 
-This project is deployed using **Vercel** for its blazing-fast performance and ease of use. You can view the live site [here](https://www.abhijitzende.com/).
+This project is deployed using **Vercel** for its blazing-fast performance and ease of use. You can view the live site [here](https://ronakkanani.com/).
 
 ### Setting up Resend API on Vercel
 
@@ -105,8 +101,9 @@ A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) f
 
 Feel free to reach out to me for collaboration, feedback, or just to say hi! 😊
 
-- **Email:** abhijitzende75@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/zende-abhijit/)
+- **Email:** ronaktalks664@gmail.com
+- **LinkedIn:** [Ronak Kanani](https://in.linkedin.com/in/ronakkanani)
+- **GitHub:** [Rebelronak](https://github.com/Rebelronak)
 
 ---
 

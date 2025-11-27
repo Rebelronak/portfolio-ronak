@@ -769,301 +769,159 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
-    id: "aidockerfileoptimizer",
-    category: "AI and DevOps",
-    title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
-    screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+  { // 01. KANU - Amazon Review Analyzer
+    id: "kanu-review-analyzer",
+    category: "AI/ML & Web Scraping",
+    title: "KANU - Fake Review Detector",
+    src: "/assets/projects-screenshots/kanu-review-analyzer/1.png",
+    screenshots: ["1.png"],
+    live: "https://kanu-amazon-review-analyzer.vercel.app/",
+    github: "https://github.com/Rebelronak/kanu-amazon-review-analyzer",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
+      frontend: [PROJECT_SKILLS.html, PROJECT_SKILLS.css, PROJECT_SKILLS.js],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.openai],
     },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "FinanceMe: Complete DevOps Capstone Project",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
-      ],
-      backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
+            AI-Powered Amazon Review Analysis Platform
           </TypographyP>
           <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
+            KANU is an advanced machine learning application that intelligently detects fake 
+            reviews from e-commerce platforms like Amazon and Flipkart. Simply paste a product 
+            URL, and the AI analyzes all reviews using BlenderBot-400 model, TF-IDF 
+            vectorization, and BERT-based transformers to help you make informed purchasing 
+            decisions with 94%+ accuracy.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Multi-Model AI Ensemble</TypographyH3>
           <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
+            Combines TF-IDF vectorization with Logistic Regression and BERT-based transformers 
+            for deep contextual understanding. Features custom sentiment analysis, readability 
+            scores, and linguistic pattern detection with sub-second response times.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Intelligent Web Scraping</TypographyH3>
+          <p className="font-mono mb-2">
+            Multi-platform support for Amazon and Flipkart with anti-bot protection, rotating 
+            user agents, smart caching system, and robust error handling. Analyzes thousands 
+            of reviews in minutes with confidence scoring for each prediction.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Advanced Analytics Dashboard</TypographyH3>
+          <p className="font-mono mb-2">
+            Real-time data visualization with interactive charts showing authenticity patterns, 
+            sentiment analysis, batch processing capabilities, and comprehensive review 
+            breakdowns with color-coded confidence indicators.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
-          <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
-
-          <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
-          <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
-          </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
-        </div>
-      );
-    },
-  },
-  { // 03. Portfolio project
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/myportfolio/landing.png",
-    screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.shadcn,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.framerMotion,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.spline,
-      ],
-      backend: [],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Welcome to my digital playground, where creativity meets code in the
-            dopest way possible.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
-          </TypographyH3>
-          <p className="font-mono mb-2">
-            Did you see that 3D keyboard modal? Yeah! I made that. That
-            interactive keyboard is being rendered in 3D on a webpage 🤯, and
-            pressing each keycap reveals a skill in a goofy way. It&apos;s like
-            typing, but make it art.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 ">Space Theme</TypographyH3>
-          <p className="font-mono mb-2">
-            Dark background + floating particles = out-of-this-world cool.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/myportfolio/navbar.png`]} />
-          <TypographyH3 className="my-4 mt-8">Projects</TypographyH3>
-
-          <p className="font-mono mb-2">
-            My top personal and freelance projects — no filler, all killer.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/myportfolio/projects.png`,
-              `${BASE_PATH}/myportfolio/project.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-8 text-center">
-            This site&apos;s not just a portfolio — it&apos;s a whole vibe.
-          </p>
-        </div>
-      );
-    },
-  },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
-    skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
+              `${BASE_PATH}/kanu-review-analyzer/1.png`,
             ]}
           />
         </div>
       );
     },
   },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
+  { // 02. DoseSafe AI
+    id: "dosesafe-ai",
+    category: "Healthcare AI & OCR",
+    title: "DoseSafe AI - Prescription Safety Platform",
+    src: "/assets/projects-screenshots/dosesafe-ai/1.png",
+    screenshots: ["1.png"],
+    live: "https://dose-safe-ai.vercel.app/",
+    github: "https://github.com/Rebelronak/DoseSafeAI",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.firebase],
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.js, PROJECT_SKILLS.css],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.openai],
     },
     get content() {
       return (
         <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            AI-Powered Prescription Safety & Drug Interaction Checker
+          </TypographyP>
           <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
+            DoseSafe AI is a comprehensive healthcare platform that detects drug interactions 
+            using OCR scanning and Groq-powered chatbot. Features real-time medication analysis, 
+            50,000+ drug database, age-specific warnings, and comprehensive safety alerts for 
+            healthcare professionals and patients.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">OCR Prescription Scanning</TypographyH3>
+          <p className="font-mono mb-2">
+            Advanced optical character recognition extracts medication information from 
+            handwritten and printed prescriptions. Supports PDF and image formats with 
+            AI-powered drug name correction using fuzzy matching and confidence scoring.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Real-time Interaction Detection</TypographyH3>
+          <p className="font-mono mb-2">
+            Powered by Groq AI chatbot analyzing 50,000+ drugs database. Provides instant 
+            safety warnings, dosage recommendations, allergy checking, and medication reminders 
+            with comprehensive error handling for API integration.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Privacy-First Architecture</TypographyH3>
+          <p className="font-mono mb-2">
+            Local processing with zero data tracking, GDPR compliant with full user control. 
+            Features dual mode system - General Mode for full features and Privacy Mode for 
+            complete data protection with no external API calls.
+          </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
+              `${BASE_PATH}/dosesafe-ai/1.png`,
             ]}
           />
         </div>
       );
     },
   },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
+  { // 03. Priye AI Chatbot
+    id: "priye-chatbot",
+    category: "AI/ML & Conversational AI",
+    title: "Priye.AI - Advanced AI Chatbot",
+    src: "/assets/projects-screenshots/priye-chatbot/1.png",
+    screenshots: ["1.png"],
+    live: "https://priye-ai-chatbot.vercel.app/",
+    github: "https://github.com/Rebelronak/priye-ai-chatbot",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [],
+      frontend: [PROJECT_SKILLS.html, PROJECT_SKILLS.css, PROJECT_SKILLS.js],
+      backend: [PROJECT_SKILLS.python, PROJECT_SKILLS.openai],
     },
     get content() {
       return (
         <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Sophisticated AI-Powered Conversational Platform
+          </TypographyP>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
+            Priye.AI is an advanced conversational AI chatbot powered by BlenderBot-400 model, 
+            featuring real-time conversations, voice recognition, dual privacy modes, and 
+            modern UI/UX with code syntax highlighting. Built with privacy-first architecture 
+            for natural dialogue experiences.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Real-time AI Conversations</TypographyH3>
+          <p className="font-mono mb-2">
+            Powered by Facebook's BlenderBot-400 model for natural dialogue with context 
+            awareness. Features voice recognition using Web Speech API, file upload support, 
+            message reactions with emoji, and smart quick suggestions for seamless interaction.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Advanced UI/UX Design</TypographyH3>
+          <p className="font-mono mb-2">
+            Mobile-first responsive design with dark/light theme switching. Includes typing 
+            indicators with shimmer animations, smooth message send/receive animations, 
+            command palette with keyboard shortcuts (Ctrl+K), and code syntax highlighting 
+            with copy functionality.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Privacy & Performance</TypographyH3>
+          <p className="font-mono mb-2">
+            Local AI processing for complete privacy, dual mode system (General & Privacy), 
+            real-time chat search with smart filters, export conversations in multiple formats, 
+            and progressive web app with offline capabilities. Sub-2s response times with 
+            WCAG 2.1 AA accessibility compliance.
+          </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
+              `${BASE_PATH}/priye-chatbot/1.png`,
             ]}
           />
         </div>
