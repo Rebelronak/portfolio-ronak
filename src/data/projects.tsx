@@ -901,7 +901,7 @@ const projects: Project[] = [
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Real-time AI Conversations</TypographyH3>
           <p className="font-mono mb-2">
-            Powered by Facebook's BlenderBot-400 model for natural dialogue with context 
+            Powered by Facebook&apos;s BlenderBot-400 model for natural dialogue with context 
             awareness. Features voice recognition using Web Speech API, file upload support, 
             message reactions with emoji, and smart quick suggestions for seamless interaction.
           </p>
